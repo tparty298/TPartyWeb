@@ -5,27 +5,86 @@
   <title>TParty</title>
 </head>
 <body>
-<div class="container">
+<header>
   <img id="logo" src="./img/logo.png" alt="TParty logo">
+  <a href="https://twitter.com/intent/tweet?screen_name=tparty_tsukuba&ref_src=twsrc%5Etfw"
+    class="twitter-mention-button" data-show-count="false" data-size="large">Tweet to @tparty_tsukuba</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</header>
+<div class="container">
+  <iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/jtl5_jAGkzk" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <style type="text/css">
 body {
   background-color: black;
+  margin: 0;
 }
 
 .container {
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+
 #logo {
   display: block;
-  width: 20vw;
-  height: 20vw;
+  margin: ;
 }
+
+.twitter-mention-button {
+  margin: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    height: calc(100vh - 150px);
+  }
+
+  #logo {
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+
+  #youtube {
+    width: 100vw;
+    height: 56.25vw;
+  }
+  .twitter-mention-button {
+    width: 15vw;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    height: calc(100vh - 80px);
+  }
+
+  #logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+  }
+
+  #youtube {
+    width: 80vw;
+    height: 45vw;
+    max-height: 80vh;
+  }
+}
+
 
 </style>
 </body>
